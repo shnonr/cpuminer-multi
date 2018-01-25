@@ -99,15 +99,15 @@ _OR_
 ```
  ./autogen.sh	# only needed if building from git repo
  ./nomacro.pl	# only needed if building on Mac OS X or with Clang
- ./configure CFLAGS="*-march=native*" --with-crypto --with-curl
+ ./configure CFLAGS="*-march=native*" --with-crypto --with-curl or ./configure --with-crypto --with-curl
  # Use -march=native if building for a single machine
- make
+ sudo make -j 4
 ```
 
 #### Note for Debian/Ubuntu users:
 
 ```
- apt-get install automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev make g++
+ apt-get install automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev make g++ zlib1g-dev
 ```
 
 #### Notes for AIX users:
